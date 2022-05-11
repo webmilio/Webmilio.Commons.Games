@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webmilio.Commons.Games", "Webmilio.Commons.Games\Webmilio.Commons.Games.csproj", "{A745A841-E05D-4441-9B22-5F91285A0309}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webmilio.Commons.Games.Showcase", "Webmilio.Commons.Games.Showcase\Webmilio.Commons.Games.Showcase.csproj", "{5489163D-5C57-40EA-B908-CAFEA7A0F11B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A745A841-E05D-4441-9B22-5F91285A0309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A745A841-E05D-4441-9B22-5F91285A0309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A745A841-E05D-4441-9B22-5F91285A0309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A745A841-E05D-4441-9B22-5F91285A0309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5489163D-5C57-40EA-B908-CAFEA7A0F11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5489163D-5C57-40EA-B908-CAFEA7A0F11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5489163D-5C57-40EA-B908-CAFEA7A0F11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5489163D-5C57-40EA-B908-CAFEA7A0F11B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {398CF949-6C23-4BF3-A2B7-45627B607E2E}
+	EndGlobalSection
+EndGlobal
