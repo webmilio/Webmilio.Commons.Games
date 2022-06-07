@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.Xna.Framework;
 
 namespace Webmilio.Commons.Games;
 
@@ -16,11 +17,13 @@ public struct Bounds
         Height = height;
     }
 
-    public (float x, float y, float width, float height) Calculate(float containerWidth, float containerHeight)
+    public Rectangle Calculate(Rectangle container)
     {
         return new(
-            X.Calculate(containerWidth), Y.Calculate(containerHeight),
-            Width.Calculate(containerWidth), Y.Calculate(containerHeight));
+            X.Calculate(container.Width) + container.X, 
+            Y.Calculate(container.Height) + container.Y,
+            Width.Calculate(container.Width), 
+            Height.Calculate(container.Height));
     }
 }
 
@@ -30,13 +33,14 @@ public struct Dimensions
         Empty = new(0, 0),
         Fill = new(0, 1);
 
-    public float pixels, percentage;
+    public int pixels;
+    public float percentage;
 
-    public Dimensions(float pixels, float percentage)
+    public Dimensions(int pixels, float percentage)
     {
         this.pixels = pixels;
         this.percentage = percentage;
     }
 
-    public float Calculate(float parentSize) => pixels + percentage * parentSize;
+    public int Calculate(float parentSize) => pixels + (int) (percentage * parentSize);
 }

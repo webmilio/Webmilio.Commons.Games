@@ -5,14 +5,15 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Webmilio.Commons.Games.UI;
 
-public class Layer : IUpdateable, IDrawable
+public class Layer : ILayer, IUpdateable, IDrawable
 {
     public Layer([NotNull] Element root)
     {
         Root = root;
+        root.Calculate();
     }
 
-    public virtual void ModifyLayers(List<ILayer> layers) { }
+    public virtual void ModifyLayers(List<ILayer> layers) { layers.Add(this); }
 
     public void Update(GameTime gameTime)
     {
@@ -32,4 +33,6 @@ public class Layer : IUpdateable, IDrawable
 
     public bool Visible { get; set; } = false;
     public bool UpdateIfInvisible { get; set; } = false;
+
+    public string Identifier { get; }
 }

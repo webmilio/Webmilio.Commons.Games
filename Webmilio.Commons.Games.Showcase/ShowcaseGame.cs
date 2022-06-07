@@ -61,7 +61,7 @@ public class ShowcaseGame : Games.Game
         activeLayers.Clear();
         layers.Do(l => l.ModifyLayers(activeLayers));
 
-        GraphicsDevice.Clear(Color.Black);
+        GraphicsDevice.Clear(Color.White);
 
         _spriteBatch.Begin();
         activeLayers.Do(e => e.Draw(_spriteBatch));

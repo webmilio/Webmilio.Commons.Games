@@ -13,7 +13,7 @@ public class Panel : Element
 
     protected override void DrawSelf(SpriteBatch spriteBatch)
     {
-        spriteBatch.DrawRectangle(Textures.Pixel, );
+        spriteBatch.DrawRectangle(Textures.Pixel, CalculatedBounds, Color.Black, 2);
 
         base.DrawSelf(spriteBatch);
     }

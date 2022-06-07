@@ -35,6 +35,10 @@ public class Element : IElement
 
     public virtual void CalculateSelf()
     {
+        if (Parent != null)
+            CalculatedBounds = Bounds.Calculate(Parent.CalculatedBounds);
+        else
+            CalculatedBounds = Bounds.Calculate(new Rectangle(0, 0))
     }
 
     public virtual void CalculateChildren()
@@ -136,8 +140,9 @@ public class Element : IElement
             OnParentModified(old);
         }
     }
-    public IBounded SizeReference { get; set; }
 
+    public Rectangle CalculatedBounds { get; protected set; }
+    
     public ReadOnlyCollection<IElement> Children { get; }
 
     public event ElementEvent ChildAdded, ChildRemoved;
